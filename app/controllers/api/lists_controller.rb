@@ -12,7 +12,6 @@ class Api::ListsController < ApiController
 
    def destroy
      begin
-       user = User.find(params[:id])
        list = List.find(params[:id])
        list.destroy
        render json: {}, status: :no_content
